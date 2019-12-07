@@ -91,7 +91,7 @@ do_action( 'rss_tag_pre', 'rss2' );
         'limit' => get_option( 'posts_per_rss' )
     );
     $args = apply_filters( 'popular_posts_feed_args', $args );
-    $popular_posts = new WPP_Query( $args );
+    $popular_posts = new \WordPressPopularPosts\Query( $args );
 
     if ( $popular_posts->get_posts() ) :
         foreach( $popular_posts->get_posts() as $popular_post ) :
