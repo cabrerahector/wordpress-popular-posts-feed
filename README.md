@@ -58,7 +58,7 @@ function wp3951_my_popular_feed_options( $args ){
 
     return $args;
 }
-apply_filters('popular_posts_feed_args', 'wp3951_my_popular_feed_options', 10);
+add_filter('popular_posts_feed_args', 'wp3951_my_popular_feed_options', 10);
 ```
 
 For more filter hooks, have a look at the `feed.php` file included with the plugin.
