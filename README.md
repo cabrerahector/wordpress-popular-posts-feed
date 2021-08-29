@@ -50,7 +50,7 @@ Here's an example:
  * Have the WPP feed display the 10 most popular posts
  * from category ID 7 from the past 30 days.
  */
-wp3951_my_popular_feed_options( $args ){
+function wp3951_my_popular_feed_options( $args ){
     $args['range'] = 'last30days';
     $args['limit'] = 10;
     $args['taxonomy'] = 'category';
