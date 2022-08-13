@@ -31,7 +31,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function init() {
 
-    if ( class_exists('WPP_Query', false) ) {
+    if ( class_exists('WordPressPopularPosts\WordPressPopularPosts', false) ) {
         add_action( 'init', __NAMESPACE__ . '\register_feed' );
     }
     else {
