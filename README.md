@@ -8,6 +8,7 @@ Adds a Popular Posts RSS feed to your WordPress site.
 * [Description](https://github.com/cabrerahector/wordpress-popular-posts-feed#description)
 * [Requirements](https://github.com/cabrerahector/wordpress-popular-posts-feed#requirements)
 * [Installation](https://github.com/cabrerahector/wordpress-popular-posts-feed#installation)
+* [Upgrading](https://github.com/cabrerahector/wordpress-popular-posts-feed#upgrading)
 * [Customizing the feed](https://github.com/cabrerahector/wordpress-popular-posts-feed#customization)
 * [Contributing](https://github.com/cabrerahector/wordpress-popular-posts-feed#contributing)
 
@@ -27,6 +28,14 @@ Popular Posts Feed is a [WordPress](http://wordpress.org/) plugin that adds a po
 2. Go to **Plugins**, find the **Popular Posts Feed** plugin and click on **Activate** to enable it.
 3. Go to **Settings > Permalinks** and click on **Save Changes** to flush WordPress' permalinks rules and have it detect the new feed.
 4. Visit &lt;your domain name&gt;/feed/popular-posts/ using your browser. If everything went OK, you'll be able to see the popular posts feed right away.
+
+## Upgrading
+
+1. Go to the [latest release page](https://github.com/cabrerahector/wordpress-popular-posts-feed/releases/latest/) and download the attached zip file from the Assets section.
+2. Deactivate and uninstall your current version of the **Popular Posts Feed** plugin.
+3. [Manually install the plugin zip file you just downloaded](https://wordpress.org/documentation/article/manage-plugins/#upload-via-wordpress-admin).
+4. Go to **Plugins** and activate the **Popular Posts Feed** plugin.
+5. Go to **Settings > Permalinks** and click on **Save Changes** to flush WordPress' permalinks rules.
 
 ## Customization
 
