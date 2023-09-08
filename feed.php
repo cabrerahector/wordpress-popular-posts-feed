@@ -13,6 +13,31 @@ if ( ! defined('WPINC') ) {
 header('Content-Type: ' . feed_content_type('rss2') . '; charset=' . get_option('blog_charset'), true);
 $more = 1;
 
+$time_value = 1;
+$time_unit = 'minute';
+$current_datetime = current_datetime();
+$last_build_date = $current_datetime->format('r');
+
+$args = apply_filters('popular_posts_feed_args', [
+    'range' => 'last7days',
+    'limit' => get_option('posts_per_rss')
+]);
+$args['is_feed'] = 1;
+
+$key = 'wpp_' . md5(json_encode($args));
+$popular_posts = \WordPressPopularPosts\Cache::get($key);
+
+if ( false === $popular_posts ) {
+    $popular_posts = new \WordPressPopularPosts\Query($args);
+
+    \WordPressPopularPosts\Cache::set(
+        $key,
+        $popular_posts,
+        $time_value,
+        $time_unit
+    );
+}
+
 echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?' . '>';
 
 /**
@@ -47,10 +72,7 @@ do_action('rss_tag_pre', 'rss2');
     <atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
     <link><?php bloginfo_rss('url') ?></link>
     <description><?php bloginfo_rss("description") ?></description>
-    <lastBuildDate><?php
-        $date = get_lastpostmodified('GMT');
-        echo $date ? mysql2date('r', $date, false) : date('r');
-    ?></lastBuildDate>
+    <lastBuildDate><?php echo $last_build_date; ?></lastBuildDate>
     <language><?php bloginfo_rss('language'); ?></language>
     <sy:updatePeriod><?php
         $duration = 'hourly';
@@ -85,13 +107,6 @@ do_action('rss_tag_pre', 'rss2');
      * @since 2.0.0
      */
     do_action('rss2_head');
-
-    $args = array(
-        'range' => 'last7days',
-        'limit' => get_option('posts_per_rss')
-    );
-    $args = apply_filters('popular_posts_feed_args', $args);
-    $popular_posts = new \WordPressPopularPosts\Query($args);
 
     if ( $popular_posts->get_posts() ) :
         foreach( $popular_posts->get_posts() as $popular_post ) :
