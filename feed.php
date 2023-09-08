@@ -108,12 +108,14 @@ do_action('rss_tag_pre', 'rss2');
                 $categories = get_the_category($popular_post->id);
                 $cat_names = array();
 
-                if ( !empty($categories) ) foreach ( (array) $categories as $category ) {
-                    $cat_names[] = sanitize_term_field('name', $category->name, $category->term_id, 'category', 'rss');
-                }
+                if ( ! empty($categories) ) {
+                    foreach ( (array) $categories as $category ) {
+                        $cat_names[] = sanitize_term_field('name', $category->name, $category->term_id, 'category', 'rss');
+                    }
 
-                foreach ( $cat_names as $cat_name ) {
-                    echo "\t\t<category><![CDATA[" . @html_entity_decode($cat_name, ENT_COMPAT, get_option('blog_charset')) . "]]></category>\n";
+                    foreach ( $cat_names as $cat_name ) {
+                        echo "\t\t<category><![CDATA[" . @html_entity_decode($cat_name, ENT_COMPAT, get_option('blog_charset')) . "]]></category>\n";
+                    }
                 }
                 ?>
                 <guid isPermaLink="false"><?php the_guid($popular_post->id); ?></guid>
