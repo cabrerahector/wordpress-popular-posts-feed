@@ -4,7 +4,7 @@
  *
  * @link              https://cabrerahector.com/
  * @since             1.0.0
- * @package           cabrerahector\Popular_Posts_Feed
+ * @package           WordPressPopularPosts\Feed
  *
  * @wordpress-plugin
  * Plugin Name:       Popular Posts Feed
@@ -17,7 +17,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace cabrerahector\Popular_Posts_Feed;
+namespace WordPressPopularPosts\Feed;
 
 // File is being accessed directly, abort.
 if ( ! defined( 'WPINC' ) ) {
