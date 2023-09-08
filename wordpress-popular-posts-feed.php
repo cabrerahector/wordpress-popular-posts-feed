@@ -10,7 +10,7 @@
  * Plugin Name:       Popular Posts Feed
  * Plugin URI:        https://cabrerahector.com/
  * Description:       Adds a popular posts feed to your site.
- * Version:           1.0.0
+ * Version:           2.0.0
  * Requires at least: 5.3
  * Requires PHP:      5.3
  * Author:            Hector Cabrera
