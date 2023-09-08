@@ -24,7 +24,7 @@ Popular Posts Feed is a [WordPress](http://wordpress.org/) plugin that adds a po
 
 ## Installation
 
-1. Git clone this repository into your `/wp-content/plugins` directory. Alternatively, you can also [download the most recent release](https://github.com/cabrerahector/wordpress-popular-posts-feed/releases) and follow the [manual plugin installation instructions](https://wordpress.org/documentation/article/manage-plugins/#upload-via-wordpress-admin).
+1. Git clone this repository into your `/wp-content/plugins` directory. Alternatively, you can also grab the zip file from the [latest release page](https://github.com/cabrerahector/wordpress-popular-posts-feed/releases/latest/) and then follow the [manual plugin installation instructions](https://wordpress.org/documentation/article/manage-plugins/#upload-via-wordpress-admin).
 2. Go to **Plugins**, find the **Popular Posts Feed** plugin and click on **Activate** to enable it.
 3. Go to **Settings > Permalinks** and click on **Save Changes** to flush WordPress' permalinks rules and have it detect the new feed.
 4. Visit &lt;your domain name&gt;/feed/popular-posts/ using your browser. If everything went OK, you'll be able to see the popular posts feed right away.
