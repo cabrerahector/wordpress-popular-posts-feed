@@ -18,8 +18,8 @@ Popular Posts Feed is a [WordPress](http://wordpress.org/) plugin that adds a po
 
 ## Requirements
 
-* WordPress 5.3 or newer.
-* PHP 5.3 or newer.
+* WordPress 6.2 or newer.
+* PHP 7.4 or newer.
 * [WordPress Popular Posts](https://wordpress.org/plugins/wordpress-popular-posts/) 5.0 or newer.
 
 ## Installation
