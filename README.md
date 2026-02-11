@@ -14,13 +14,13 @@ Adds a Popular Posts RSS feed to your WordPress site.
 
 ## Description
 
-Popular Posts Feed is a [WordPress](http://wordpress.org/) plugin that adds a popular posts feed to your WordPress-powered web site.
+Popular Posts Feed is a [WordPress](https://wordpress.org/) plugin that adds a popular posts feed to your WordPress-powered web site.
 
 ## Requirements
 
 * WordPress 6.2 or newer.
 * PHP 7.4 or newer.
-* [WordPress Popular Posts](https://wordpress.org/plugins/wordpress-popular-posts/) 5.0 or newer.
+* [WP Popular Posts](https://wordpress.org/plugins/wordpress-popular-posts/) 5.0 or newer.
 
 ## Installation
 
@@ -50,7 +50,7 @@ Hook into `popular_posts_feed_args` to:
 - Have the feed return popular posts from a given author.
 - etcetera.
 
-The `popular_posts_feed_args` accepts pretty much the same parameters used by the [wpp_get_mostpopular() template tag](https://github.com/cabrerahector/wordpress-popular-posts/wiki/2.-Template-tags#wpp_get_mostpopular) from the [WordPress Popular Posts plugin](https://wordpress.org/plugins/wordpress-popular-posts/).
+The `popular_posts_feed_args` accepts pretty much the same parameters used by the [wpp_get_mostpopular() template tag](https://github.com/cabrerahector/wordpress-popular-posts/wiki/2.-Template-tags#wpp_get_mostpopular) from the [WP Popular Posts plugin](https://wordpress.org/plugins/wordpress-popular-posts/).
 
 Here's an example:
 
