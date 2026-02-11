@@ -11,8 +11,9 @@
  * Plugin URI:        https://cabrerahector.com/
  * Description:       Adds a popular posts feed to your site.
  * Version:           2.0.0
- * Requires at least: 5.3
- * Requires PHP:      5.3
+ * Requires at least: 6.2
+ * Requires PHP:      7.4
+ * Requires Plugins:  wordpress-popular-posts
  * Author:            Hector Cabrera
  * Author URI:        https://cabrerahector.com/
  * License:           GPL-3.0+
